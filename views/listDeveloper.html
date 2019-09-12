@@ -1,0 +1,44 @@
+<html>
+<body>
+    <link rel="stylesheet" href="css/styles.css">
+    <table id="t01">
+        <tr>
+            <th>
+                First Name
+            </th>
+            <th>
+                Last Name
+            </th>
+            <th>
+                Developer ID
+            </th>
+            <th>
+                Developer Level
+            </th>
+            <th>
+                Address
+            </th>
+        </tr>
+        <% for(let i=0;i<database.length;i++){ %>
+        <tr>
+            <td>
+                <%= database[i].name.firstName %>
+            </td>
+            <td>
+                <%= database[i].name.lastName %>
+            </td>
+            <td>
+                <%= database[i]._id %>
+            </td>
+            <td>
+                <%= database[i].level %>
+            </td>
+            <td>
+                <%= database[i].address.state + ' ' + database[i].address.suburb + ' ' + database[i].address.street + ' ' + database[i].address.unit %>
+            </td>
+        </tr>
+        <%} %>
+    </table>
+</body>
+Click <a href="/"> HERE</a> to return to home page!!
+</html>
